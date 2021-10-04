@@ -14,7 +14,10 @@ const {
   updateMethod,
 } = require("./controllers/CurdCont");
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/friut", { useNewUrlParser: true });
+mongoose.connect(
+  "mongodb://raneem:0000@cluster0-shard-00-00.ivvf0.mongodb.net:27017,cluster0-shard-00-01.ivvf0.mongodb.net:27017,cluster0-shard-00-02.ivvf0.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-khqokz-shard-0&authSource=admin&retryWrites=true&w=majority",
+  { useNewUrlParser: true }
+);
 
 app.get("/", (req, res) => {
   res.send("test");
